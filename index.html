@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIZE ADEDEJI | Web Developer & Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-black text-white font-sans transition-colors duration-300">
+    <!-- Preloader -->
+    <div
+      id="preloader"
+      class="fixed inset-0 w-full h-full bg-white z-50 flex justify-center items-center transition-opacity duration-500"
+    >
+      <div class="animate-pulse">
+        <div
+          class="w-24 h-24 rounded-full border-4 border-primary-400 border-t-primary-600 animate-spin"
+        ></div>
+      </div>
+    </div>
+    <!-- Transition Overlay -->
+    <div
+      id="transition-overlay"
+      class="fixed inset-0 bg-black z-40 transform -translate-y-full"
+    ></div>
+
+    <main class="relative pt-20">
+      <!-- Home Section -->
+      <section id="home" class="section active min-h-100vh relative">
+        <!-- Navbar only in Home section -->
+        <header
+          id="home-navbar"
+          class="fixed top-0 left-0 right-0 z-40 shadow-sm transition-all duration-300 mt-6"
+        >
+          <nav class="w-full flex justify-center relative">
+            <ul class="flex flex-row space-x-8">
+              <li>
+                <button
+                  class="nav-link relative py-2 px-1 font-medium active"
+                  data-section="home"
+                >
+                  Home
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link relative py-2 px-1 font-medium"
+                  data-section="about"
+                >
+                  About
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link relative py-2 px-1 font-medium"
+                  data-section="services"
+                >
+                  Services
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link relative py-2 px-1 font-medium"
+                  data-section="portfolio"
+                >
+                  Portfolio
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link relative py-2 px-1 font-medium"
+                  data-section="resume"
+                >
+                  Resume
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link relative py-2 px-1 font-medium"
+                  data-section="contact"
+                >
+                  Contact
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div class="absolute inset-0 z-0">
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-[url('img/home.png')] bg-cover bg-center"
+          ></div>
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary-300/10 to-primary-600/5 opacity-30"
+          ></div>
+        </div>
+        <div class="container mx-auto px-6 z-10">
+          <div class="flex flex-col lg:flex-row items-center justify-between">
+            <div class="lg:w-1/2 mb-12 lg:mb-0 text-center lg:text-left">
+              <h6 class="text-primary-500 font-medium mb-4">Hello, I'm</h6>
+              <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4"
+              >
+                PRIZE
+                <span
+                  class="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text"
+                  >ADEDEJI</span
+                >
+              </h1>
+              <h2 class="text-xl md:text-2xl font-medium mb-4">
+                I'm a
+                <span id="typed" class="text-primary-500 font-bold"></span>
+              </h2>
+              <p
+                class="text-base mb-6 max-w-md mx-auto lg:mx-0 leading-relaxed"
+              >
+                Creating digital experiences that blend creativity,
+                functionality, and performance to drive business growth and user
+                engagement.
+              </p>
+              <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+                <button
+                  class="btn-hover px-6 py-2 bg-transparent border-2 border-gray-300 hover:border-primary-500 text-gray-700 hover:text-primary-500 font-medium rounded-full nav-link"
+                  data-section="portfolio"
+                >
+                  View My Work
+                </button>
+                <button
+                  class="btn-hover px-6 py-2 bg-transparent border-2 border-gray-300 hover:border-primary-500 text-gray-700 hover:text-primary-500 font-medium rounded-full nav-link"
+                  data-section="contact"
+                >
+                  Hire Me
+                </button>
+              </div>
+              <div class="mt-8 flex justify-center lg:justify-start gap-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300"
+                  ><i class="fab fa-dribbble"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section relative bg-gray-50">
+        <button
+          class="close-section-btn fixed top-8 right-8 z-50 p-3 rounded-full bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-300"
+          data-target-section="home"
+        >
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <div class="container mx-auto px-6">
+          <div
+            class="flex flex-col lg:flex-row items-center justify-between gap-12"
+          >
+            <div class="lg:w-1/2">
+              <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+                Who Am I ?
+                <span
+                  class="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent"
+                  >Web Developer</span
+                >
+              </h2>
+              <p class="text-lg mb-6 leading-relaxed">
+                An IT Support professional from Lagos, Nigeria, with a B.Sc in
+                Information Technology from Trinity University. I specialize in
+                network troubleshooting, backend development using Django and
+                PHP, and providing exceptional customer service. My diverse
+                experience spans logistics, travel consulting, and retail
+                operations, complemented by innovative projects like developing
+                ticketing systems and web applications.
+              </p>
+              <p class="text-lg mb-8 leading-relaxed">
+                I'm passionate about creating efficient technology solutions
+                that solve real-world problems while maintaining strong client
+                relationships and operational excellence.
+              </p>
+
+              <div class="grid grid-cols-2 gap-6 mb-8">
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-check text-primary-500"></i>
+                  </div>
+                  <span>Web Development</span>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-check text-primary-500"></i>
+                  </div>
+                  <span>Backend Development</span>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-check text-primary-500"></i>
+                  </div>
+                  <span>IT Support</span>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-check text-primary-500"></i>
+                  </div>
+                  <span>Technical Support</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="#"
+                  class="btn-hover px-6 py-3 bg-primary-500 border-2 border-gray-300 hover:bg-primary-600 text-white font-medium rounded-full shadow-md flex items-center"
+                >
+                  <i class="fas fa-download mr-2"></i> Download CV
+                </a>
+                <button
+                  class="btn-hover px-6 py-3 bg-primary-500 border-2 border-gray-300 hover:bg-primary-600 text-white font-medium rounded-full shadow-md flex items-center nav-link"
+                  data-section="skills"
+                >
+                  <i class="fas fa-medal mr-2"></i> My Skills
+                </button>
+              </div>
+            </div>
+
+            <div class="lg:w-1/2 relative">
+              <div class="relative mx-auto lg:ml-auto max-w-md">
+                <div
+                  class="absolute -top-6 -left-6 w-full h-full rounded-3xl border-2 border-primary-100"
+                ></div>
+                <div
+                  class="absolute -bottom-6 -right-6 w-full h-full rounded-3xl border-2 border-primary-50"
+                ></div>
+                <div class="relative rounded-3xl overflow-hidden">
+                  <img
+                    src="img/new.png"
+                    alt="Professional portrait of Alex Carter, a web developer wearing glasses standing against modern office background"
+                    class="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="section">
+        <button
+          class="close-section-btn fixed top-8 right-8 z-50 p-3 rounded-full bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-300"
+          data-target-section="home"
+        >
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+              What I Can Do
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg leading-relaxed">
+              Comprehensive digital solutions tailored to your business needs,
+              from initial concept to final implementation.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div
+              class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl border border-gray-100 transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-primary-500/10 rounded-xl flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-laptop-code text-primary-500 text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-display font-bold mb-4">
+                Web Development
+              </h3>
+              <p class="text-gray-600 mb-5">
+                Custom websites built with modern technologies like React, Vue,
+                and Node.js, optimized for performance and scalability.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>Responsive Design</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>SEO Friendly</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>Performance Optimized</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div
+              class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl border border-gray-100 transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-primary-500/10 rounded-xl flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-paint-brush text-primary-500 text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-display font-bold mb-4">
+                Backend Development
+              </h3>
+              <p class="text-gray-600 mb-5">
+                Robust server-side solutions using Django and PHP frameworks,
+                designed for reliability and efficient data management.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>Database Integration</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>API Development</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>Security Implementation</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div
+              class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl border border-gray-100 transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-primary-500/10 rounded-xl flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-mobile-alt text-primary-500 text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-display font-bold mb-4">IT Support</h3>
+              <p class="text-gray-600 mb-5">
+                Comprehensive technical support services including network
+                troubleshooting, hardware maintenance, and system optimization.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>Network Configuration</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>Hardware Diagnostics</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>System Maintenance</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div
+              class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl border border-gray-100 transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-primary-500/10 rounded-xl flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-search-dollar text-primary-500 text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-display font-bold mb-4">
+                Technical Support
+              </h3>
+              <p class="text-gray-600 mb-5">
+                End-to-end customer technical assistance with prompt issue
+                resolution and system guidance for seamless operations.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>Issue Resolution</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>User Training</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>System Documentation</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Service 5 -->
+            <div
+              class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl border border-gray-100 transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-primary-500/10 rounded-xl flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-headset text-primary-500 text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-display font-bold mb-4">
+                Support & Maintenance
+              </h3>
+              <p class="text-gray-600 mb-5">
+                Ongoing support and maintenance packages to keep your website
+                running smoothly.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>Bug Fixes</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>Security Updates</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary-500 mr-2"></i>
+                  <span>Performance Monitoring</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume Section -->
+      <section id="resume" class="section bg-gray-50">
+        <button
+          class="close-section-btn fixed top-8 right-8 z-50 p-3 rounded-full bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-300"
+          data-target-section="home"
+        >
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+              My Resume
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg leading-relaxed">
+              My professional journey and educational background.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12">
+            <!-- Experience -->
+            <div>
+              <div class="mb-8">
+                <h3
+                  class="text-2xl font-display font-bold mb-6 flex items-center"
+                >
+                  <i class="fas fa-briefcase mr-4 text-primary-500"></i>
+                  Experience
+                </h3>
+
+                <div class="relative pl-16">
+                  <!-- Timeline Item 1 -->
+                  <div class="timeline-item pb-8 relative">
+                    <div class="timeline-dot"></div>
+                    <div class="text-gray-500 text-sm mb-3">2022 - Present</div>
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+                    >
+                      <h4 class="font-bold text-lg mb-1">
+                        Senior Web Developer
+                      </h4>
+                      <p class="text-gray-500 text-sm mb-4">
+                        Digital Innovations Inc.
+                      </p>
+                      <p class="text-gray-600">
+                        Lead developer responsible for architecting and
+                        implementing complex web applications using React,
+                        Node.js, and MongoDB.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Timeline Item 2 -->
+                  <div class="timeline-item pb-8 relative">
+                    <div class="timeline-dot"></div>
+                    <div class="text-gray-500 text-sm mb-4">2019 - 2022</div>
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+                    >
+                      <h4 class="font-bold text-lg mb-1">Web Developer</h4>
+                      <p class="text-gray-500 text-sm mb-3">Creative Studio</p>
+                      <p class="text-gray-600">
+                        Developed and maintained client websites, implemented
+                        responsive designs, and optimized websites for
+                        performance and SEO.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Timeline Item 3 -->
+                  <div class="timeline-item relative">
+                    <div class="timeline-dot"></div>
+                    <div class="text-gray-500 text-sm mb-4">2017 - 2019</div>
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+                    >
+                      <h4 class="font-bold text-lg mb-1">Junior Developer</h4>
+                      <p class="text-gray-500 text-sm mb-3">
+                        WebTech Solutions
+                      </p>
+                      <p class="text-gray-600">
+                        Assisted in developing web applications, fixed bugs, and
+                        implemented UI components based on designer mockups.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+              <div class="mb-8">
+                <h3
+                  class="text-2xl font-display font-bold mb-6 flex items-center"
+                >
+                  <i class="fas fa-graduation-cap mr-4 text-primary-500"></i>
+                  Education
+                </h3>
+
+                <div class="relative pl-16">
+                  <!-- Timeline Item 1 -->
+                  <div class="timeline-item pb-8 relative">
+                    <div class="timeline-dot"></div>
+                    <div class="text-gray-500 text-sm mb-4">2015 - 2017</div>
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+                    >
+                      <h4 class="font-bold text-lg mb-1">
+                        Master's in Computer Science
+                      </h4>
+                      <p class="text-gray-500 text-sm mb-3">
+                        Stanford University
+                      </p>
+                      <p class="text-gray-600">
+                        Specialized in Human-Computer Interaction and Web
+                        Technologies. Thesis on "Optimizing Web Performance for
+                        Mobile Devices".
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Timeline Item 2 -->
+                  <div class="timeline-item pb-8 relative">
+                    <div class="timeline-dot"></div>
+                    <div class="text-gray-500 text-sm mb-4">2011 - 2015</div>
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+                    >
+                      <h4 class="font-bold text-lg mb-1">
+                        Bachelor's in Software Engineering
+                      </h4>
+                      <p class="text-gray-500 text-sm mb-3">MIT</p>
+                      <p class="text-gray-600">
+                        Graduated with honors. Focused on Full-Stack
+                        Development, Database Systems, and Software
+                        Architecture.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Timeline Item 3 -->
+                  <div class="timeline-item relative">
+                    <div class="timeline-dot"></div>
+                    <div class="text-gray-500 text-sm mb-4">2010 - 2011</div>
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+                    >
+                      <h4 class="font-bold text-lg mb-1">
+                        Web Design Certification
+                      </h4>
+                      <p class="text-gray-500 text-sm mb-3">General Assembly</p>
+                      <p class="text-gray-600">
+                        Intensive 12-week program covering HTML5, CSS3,
+                        JavaScript, UX principles, and responsive design.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section">
+        <button
+          class="close-section-btn fixed top-8 right-8 z-50 p-3 rounded-full bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-300"
+          data-target-section="about"
+        >
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+              Professional Skills
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg leading-relaxed">
+              A comprehensive set of skills honed through years of professional
+              experience and continuous learning.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div>
+              <!-- Frontend Skills -->
+              <div
+                class="skill-card bg-white p-6 rounded-xl shadow-lg border border-gray-100 mb-8"
+              >
+                <h3
+                  class="text-xl font-display font-bold mb-6 flex items-center"
+                >
+                  <i class="fas fa-laptop-code mr-3 text-primary-500"></i>
+                  Frontend Development
+                </h3>
+
+                <div class="space-y-6">
+                  <!-- HTML/CSS -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>HTML/CSS</span>
+                      <span>95%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="95%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- JavaScript -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>JavaScript</span>
+                      <span>90%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="90%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- React -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>React.js</span>
+                      <span>85%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="85%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Design Skills -->
+              <div
+                class="skill-card bg-white p-6 rounded-xl shadow-lg border border-gray-100 mb-8"
+              >
+                <h3
+                  class="text-xl font-display font-bold mb-6 flex items-center"
+                >
+                  <i class="fas fa-paint-brush mr-3 text-primary-500"></i>
+                  Design
+                </h3>
+
+                <div class="space-y-6">
+                  <!-- UI/UX Design -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>UI/UX Design</span>
+                      <span>90%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="90%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- Figma -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>Figma</span>
+                      <span>85%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="85%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- Adobe Creative Suite -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>Adobe Creative Suite</span>
+                      <span>75%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="75%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <!-- Backend Skills -->
+              <div
+                class="skill-card bg-white p-6 rounded-xl shadow-lg border border-gray-100 mb-8"
+              >
+                <h3
+                  class="text-xl font-display font-bold mb-6 flex items-center"
+                >
+                  <i class="fas fa-server mr-3 text-primary-500"></i>
+                  Backend Development
+                </h3>
+
+                <div class="space-y-6">
+                  <!-- Node.js -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>Node.js</span>
+                      <span>80%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="80%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- MongoDB -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>MongoDB</span>
+                      <span>75%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="75%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- MySQL -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>MySQL</span>
+                      <span>70%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="70%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Other Skills -->
+              <div
+                class="skill-card bg-white p-6 rounded-xl shadow-lg border border-gray-100 mb-8"
+              >
+                <h3
+                  class="text-xl font-display font-bold mb-6 flex items-center"
+                >
+                  <i class="fas fa-cogs mr-3 text-primary-500"></i>
+                  Other Skills
+                </h3>
+
+                <div class="space-y-6">
+                  <!-- Git -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>Git</span>
+                      <span>85%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="85%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- SEO -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>SEO</span>
+                      <span>80%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="80%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- DevOps -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span>DevOps</span>
+                      <span>65%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        class="skill-bar bg-white h-2.5 rounded-full"
+                        style="width: 0%"
+                        data-width="65%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="section bg-gray-50">
+        <button
+          class="close-section-btn fixed top-8 right-8 z-50 p-3 rounded-full bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-300"
+          data-target-section="home"
+        >
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+              Featured Work
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg leading-relaxed">
+              A selection of my recent projects showcasing my skills and
+              expertise.
+            </p>
+          </div>
+          <!-- Portfolio Grid -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Portfolio Item 1 -->
+            <div class="portfolio-item" data-category="web">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100"
+              >
+                <div class="relative overflow-hidden group">
+                  <img
+                    src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6c736663-a766-4992-ba06-22fb4f8569f2.png"
+                    alt="Modern e-commerce website design with clean layout and product showcase"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <a
+                      href="#"
+                      class="btn-hover px-6 py-2 bg-white hover:bg-primary-500 hover:text-white text-gray-800 rounded-full font-medium inline-flex items-center"
+                    >
+                      <i class="fas fa-eye mr-2"></i> View Project
+                    </a>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h4 class="font-bold text-lg mb-1">E-Commerce Website</h4>
+                  <p class="text-gray-500 text-sm mb-4">Web Design</p>
+                  <p class="text-gray-600 text-sm">
+                    A modern e-commerce platform with intuitive navigation and
+                    seamless checkout experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-item" data-category="app">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100"
+              >
+                <div class="relative overflow-hidden group">
+                  <img
+                    src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/331cb496-ac78-4197-8ba6-b693c3568ab7.png"
+                    alt="Mobile app interface design with dashboard and analytics screens"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <a
+                      href="#"
+                      class="btn-hover px-6 py-2 bg-white hover:bg-primary-500 hover:text-white text-gray-800 rounded-full font-medium inline-flex items-center"
+                    >
+                      <i class="fas fa-eye mr-2"></i> View Project
+                    </a>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h4 class="font-bold text-lg mb-1">Mobile Finance App</h4>
+                  <p class="text-gray-500 text-sm mb-4">App Development</p>
+                  <p class="text-gray-600 text-sm">
+                    Personal finance management app with real-time expense
+                    tracking and budgeting tools.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-item" data-category="web">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100"
+              >
+                <div class="relative overflow-hidden group">
+                  <img
+                    src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5f374e15-8a28-471b-90b5-77801971aca0.png"
+                    alt="Corporate website design with animated elements and video background"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <a
+                      href="#"
+                      class="btn-hover px-6 py-2 bg-white hover:bg-primary-500 hover:text-white text-gray-800 rounded-full font-medium inline-flex items-center"
+                    >
+                      <i class="fas fa-eye mr-2"></i> View Project
+                    </a>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h4 class="font-bold text-lg mb-1">Corporate Website</h4>
+                  <p class="text-gray-500 text-sm mb-4">Web Design</p>
+                  <p class="text-gray-600 text-sm">
+                    Redesigned corporate website with improved user experience
+                    and accessibility features.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div class="portfolio-item" data-category="branding">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100"
+              >
+                <div class="relative overflow-hidden group">
+                  <img
+                    src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/50aa2e72-752d-4cd2-bf2a-2137ef847345.png"
+                    alt="Brand identity design elements including logo, colors, and typography"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <a
+                      href="#"
+                      class="btn-hover px-6 py-2 bg-white hover:bg-primary-500 hover:text-white text-gray-800 rounded-full font-medium inline-flex items-center"
+                    >
+                      <i class="fas fa-eye mr-2"></i> View Project
+                    </a>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h4 class="font-bold text-lg mb-1">Brand Identity</h4>
+                  <p class="text-gray-500 text-sm mb-4">Branding</p>
+                  <p class="text-gray-600 text-sm">
+                    Comprehensive brand identity development for a health and
+                    wellness startup.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 5 -->
+            <div class="portfolio-item" data-category="app">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100"
+              >
+                <div class="relative overflow-hidden group">
+                  <img
+                    src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1efc88f2-5ac4-4839-8d51-e5237ee6e0e6.png"
+                    alt="Fitness tracking mobile app with workout plans and progress charts"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <a
+                      href="#"
+                      class="btn-hover px-6 py-2 bg-white hover:bg-primary-500 hover:text-white text-gray-800 rounded-full font-medium inline-flex items-center"
+                    >
+                      <i class="fas fa-eye mr-2"></i> View Project
+                    </a>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h4 class="font-bold text-lg mb-1">Fitness App</h4>
+                  <p class="text-gray-500 text-sm mb-4">App Development</p>
+                  <p class="text-gray-600 text-sm">
+                    Cross-platform fitness application with personalized workout
+                    plans and progress tracking.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 6 -->
+            <div class="portfolio-item" data-category="web">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100"
+              >
+                <div class="relative overflow-hidden group">
+                  <img
+                    src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eda80e19-616a-4776-b48f-06bf21e4c539.png"
+                    alt="Restaurant website with online ordering system and menu display"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <a
+                      href="#"
+                      class="btn-hover px-6 py-2 bg-white hover:bg-primary-500 hover:text-white text-gray-800 rounded-full font-medium inline-flex items-center"
+                    >
+                      <i class="fas fa-eye mr-2"></i> View Project
+                    </a>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h4 class="font-bold text-lg mb-1">Restaurant Website</h4>
+                  <p class="text-gray-500 text-sm mb-4">Web Design</p>
+                  <p class="text-gray-600 text-sm">
+                    Responsive website with online reservation system and
+                    dynamic menu display.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section id="contact" class="section bg-gray-50">
+        <button
+          class="close-section-btn fixed top-8 right-8 z-50 p-3 rounded-full bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-300"
+          data-target-section="home"
+        >
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+              Contact Me
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg leading-relaxed">
+              Have a project in mind or want to discuss potential opportunities?
+              I'd love to hear from you!
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12">
+            <div>
+              <div
+                class="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
+              >
+                <h3 class="text-xl font-display font-bold mb-6">
+                  Send Me a Message
+                </h3>
+                <form id="contact-form" class="space-y-6">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        for="name"
+                        class="block text-sm font-medium text-gray-700 mb-2"
+                        >Your Name</label
+                      >
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 bg-transparent text-white"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="email"
+                        class="block text-sm font-medium text-gray-700 mb-2"
+                        >Your Email</label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 bg-transparent text-white"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >Subject</label
+                    >
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 bg-transparent text-white"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="message"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >Message</label
+                    >
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 bg-transparent text-white"
+                      required
+                    ></textarea>
+                  </div>
+                  <div>
+                    <button
+                      type="submit"
+                      class="btn-hover w-full px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-full shadow-md"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div>
+              <div
+                class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 h-full"
+              >
+                <h3 class="text-xl font-display font-bold mb-6">
+                  Contact Information
+                </h3>
+                <p class="text-gray-600 mb-8">
+                  Feel free to reach out via email or phone. I'm also available
+                  on social media platforms for quick questions or discussions.
+                </p>
+
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center mr-4 mt-1"
+                    >
+                      <i class="fas fa-map-marker-alt text-primary-500"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-800">Location</h4>
+                      <p class="text-gray-600">San Francisco, CA</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center mr-4 mt-1"
+                    >
+                      <i class="fas fa-envelope text-primary-500"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-800">Email</h4>
+                      <p class="text-gray-600">hello@alexcarter.dev</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center mr-4 mt-1"
+                    >
+                      <i class="fas fa-phone-alt text-primary-500"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-800">Phone</h4>
+                      <p class="text-gray-600">+1 (555-123-4567)</p>
+                    </div>
+                  </div>
+                </div>
+
+                <h4 class="font-bold text-gray-800 mt-8 mb-4">Follow Me</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300"
+                  >
+                    <i class="fab fa-dribbble"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
