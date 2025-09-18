@@ -42,16 +42,36 @@
         <!-- Navbar only in Home section -->
         <header
           id="home-navbar"
-          class="fixed top-0 left-0 right-0 z-40 shadow-sm transition-all duration-300 mt-2 bg-transparent"
+          class="fixed top-0 left-0 right-0 z-40 shadow-sm transition-all duration-300 mt-6"
         >
-          <nav class="w-full flex justify-center relative">
-            <!-- Mobile: horizontally scrollable nav; Desktop: centered inline list -->
-            <ul
-              class="flex flex-row space-x-6 overflow-x-auto no-scrollbar py-2 px-4 lg:px-0 lg:space-x-8"
+          <nav class="w-full flex justify-center relative items-center">
+            <!-- Mobile menu button (visible only on small screens) -->
+            <button
+              id="mobile-menu-button"
+              class="lg:hidden absolute left-4 top-3 z-50 p-3 rounded-md focus:outline-none"
+              aria-label="Toggle navigation"
             >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Desktop nav (hidden on small screens) -->
+            <ul class="hidden lg:flex flex-row space-x-8">
               <li>
                 <button
-                  class="nav-link relative py-2 px-3 font-medium active text-sm lg:text-base"
+                  class="nav-link relative py-2 px-1 font-medium active"
                   data-section="home"
                 >
                   Home
@@ -59,7 +79,7 @@
               </li>
               <li>
                 <button
-                  class="nav-link relative py-2 px-3 font-medium text-sm lg:text-base"
+                  class="nav-link relative py-2 px-1 font-medium"
                   data-section="about"
                 >
                   About
@@ -67,7 +87,7 @@
               </li>
               <li>
                 <button
-                  class="nav-link relative py-2 px-3 font-medium text-sm lg:text-base"
+                  class="nav-link relative py-2 px-1 font-medium"
                   data-section="services"
                 >
                   Services
@@ -75,7 +95,7 @@
               </li>
               <li>
                 <button
-                  class="nav-link relative py-2 px-3 font-medium text-sm lg:text-base"
+                  class="nav-link relative py-2 px-1 font-medium"
                   data-section="portfolio"
                 >
                   Portfolio
@@ -83,19 +103,79 @@
               </li>
               <li>
                 <button
-                  class="nav-link relative py-2 px-3 font-medium text-sm lg:text-base"
+                  class="nav-link relative py-2 px-1 font-medium"
                   data-section="contact"
                 >
                   Contact
                 </button>
               </li>
             </ul>
+
+            <!-- Mobile menu (hidden by default) -->
+            <div
+              id="mobile-menu"
+              class="lg:hidden hidden absolute left-0 right-0 top-full mt-2 bg-black/90 backdrop-blur-md z-40"
+            >
+              <ul class="flex flex-col py-4 px-5 space-y-2">
+                <li>
+                  <button
+                    class="nav-link block text-left w-full py-3 px-2 font-medium"
+                    data-section="home"
+                  >
+                    Home
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="nav-link block text-left w-full py-3 px-2 font-medium"
+                    data-section="about"
+                  >
+                    About
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="nav-link block text-left w-full py-3 px-2 font-medium"
+                    data-section="services"
+                  >
+                    Services
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="nav-link block text-left w-full py-3 px-2 font-medium"
+                    data-section="portfolio"
+                  >
+                    Portfolio
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="nav-link block text-left w-full py-3 px-2 font-medium"
+                    data-section="contact"
+                  >
+                    Contact
+                  </button>
+                </li>
+              </ul>
+            </div>
           </nav>
         </header>
         <div class="absolute inset-0 z-0">
+          <!-- Desktop background (hidden on small screens) -->
           <div
-            class="absolute top-0 left-0 w-full h-full bg-[url('img/home.png')] bg-cover bg-center"
+            class="absolute top-0 left-0 w-full h-full bg-[url('img/home.png')] bg-cover bg-center hidden lg:block"
+            aria-hidden="true"
           ></div>
+
+          <!-- Mobile hero image fallback (visible only on small screens) -->
+          <img
+            src="img/home.png"
+            alt="Hero background"
+            class="absolute top-0 left-0 w-full h-full object-cover object-center block lg:hidden"
+            aria-hidden="true"
+          />
+
           <div
             class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary-300/10 to-primary-600/5 opacity-30"
           ></div>
@@ -113,6 +193,16 @@
                   >ADEDEJI</span
                 >
               </h1>
+              <!-- Mobile-only portrait placed directly below the heading -->
+              <div class="lg:hidden w-full flex justify-center mb-6 mt-4">
+                <div class="mobile-hero-card">
+                  <img
+                    src="img/home1.png"
+                    alt="Hero portrait"
+                    class="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+              </div>
               <h2 class="text-xl md:text-2xl font-medium mb-4">
                 I'm a
                 <span id="typed" class="text-primary-500 font-bold"></span>
@@ -248,14 +338,12 @@
             </div>
 
             <div class="lg:w-1/2 relative">
-              <div
-                class="relative mx-auto lg:ml-auto max-w-md portrait-wrapper"
-              >
+              <div class="relative mx-auto lg:ml-auto max-w-md">
                 <div
-                  class="absolute portrait-deco deco-top -top-6 -left-6 w-full h-full rounded-3xl border-2 border-primary-100"
+                  class="absolute -top-6 -left-6 w-full h-full rounded-3xl border-2 border-primary-100"
                 ></div>
                 <div
-                  class="absolute portrait-deco deco-bottom -bottom-6 -right-6 w-full h-full rounded-3xl border-2 border-primary-50"
+                  class="absolute -bottom-6 -right-6 w-full h-full rounded-3xl border-2 border-primary-50"
                 ></div>
                 <div class="relative rounded-3xl overflow-hidden">
                   <img
