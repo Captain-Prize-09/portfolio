@@ -42,13 +42,16 @@
         <!-- Navbar only in Home section -->
         <header
           id="home-navbar"
-          class="fixed top-0 left-0 right-0 z-40 shadow-sm transition-all duration-300 mt-6"
+          class="fixed top-0 left-0 right-0 z-40 shadow-sm transition-all duration-300 mt-2 bg-transparent"
         >
           <nav class="w-full flex justify-center relative">
-            <ul class="flex flex-row space-x-8">
+            <!-- Mobile: horizontally scrollable nav; Desktop: centered inline list -->
+            <ul
+              class="flex flex-row space-x-6 overflow-x-auto no-scrollbar py-2 px-4 lg:px-0 lg:space-x-8"
+            >
               <li>
                 <button
-                  class="nav-link relative py-2 px-1 font-medium active"
+                  class="nav-link relative py-2 px-3 font-medium active text-sm lg:text-base"
                   data-section="home"
                 >
                   Home
@@ -56,7 +59,7 @@
               </li>
               <li>
                 <button
-                  class="nav-link relative py-2 px-1 font-medium"
+                  class="nav-link relative py-2 px-3 font-medium text-sm lg:text-base"
                   data-section="about"
                 >
                   About
@@ -64,7 +67,7 @@
               </li>
               <li>
                 <button
-                  class="nav-link relative py-2 px-1 font-medium"
+                  class="nav-link relative py-2 px-3 font-medium text-sm lg:text-base"
                   data-section="services"
                 >
                   Services
@@ -72,7 +75,7 @@
               </li>
               <li>
                 <button
-                  class="nav-link relative py-2 px-1 font-medium"
+                  class="nav-link relative py-2 px-3 font-medium text-sm lg:text-base"
                   data-section="portfolio"
                 >
                   Portfolio
@@ -80,7 +83,7 @@
               </li>
               <li>
                 <button
-                  class="nav-link relative py-2 px-1 font-medium"
+                  class="nav-link relative py-2 px-3 font-medium text-sm lg:text-base"
                   data-section="contact"
                 >
                   Contact
@@ -245,12 +248,14 @@
             </div>
 
             <div class="lg:w-1/2 relative">
-              <div class="relative mx-auto lg:ml-auto max-w-md">
+              <div
+                class="relative mx-auto lg:ml-auto max-w-md portrait-wrapper"
+              >
                 <div
-                  class="absolute -top-6 -left-6 w-full h-full rounded-3xl border-2 border-primary-100"
+                  class="absolute portrait-deco deco-top -top-6 -left-6 w-full h-full rounded-3xl border-2 border-primary-100"
                 ></div>
                 <div
-                  class="absolute -bottom-6 -right-6 w-full h-full rounded-3xl border-2 border-primary-50"
+                  class="absolute portrait-deco deco-bottom -bottom-6 -right-6 w-full h-full rounded-3xl border-2 border-primary-50"
                 ></div>
                 <div class="relative rounded-3xl overflow-hidden">
                   <img
@@ -992,7 +997,7 @@
                     <div
                       class="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center mr-4 mt-1"
                     >
-                      <i class='fa fa-phone text-primary-500'></i>
+                      <i class="fa fa-phone text-primary-500"></i>
                     </div>
                     <div class="mb-10">
                       <h4 class="font-bold text-gray-800">Phone</h4>
@@ -1000,7 +1005,7 @@
                     </div>
                   </div>
                 </div>
-                
+
                 <div>
                   <button
                     type="submit"

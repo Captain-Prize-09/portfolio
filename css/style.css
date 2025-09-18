@@ -176,16 +176,71 @@ body {
 }
 
 .skill-card {
-      transition: all 0.3s ease;
-      transform-style: preserve-3d;
-    }
-    .skill-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    }
-    /* Modify the skill-bar color */
-    .skill-bar {
-      height: 8px;
-      transition: width 1.5s ease;
-      background-color: #a3a3a3; /* Changed from bg-white to a gray color */
-    }
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+/* Modify the skill-bar color */
+.skill-bar {
+  height: 8px;
+  transition: width 1.5s ease;
+  background-color: #a3a3a3; /* Changed from bg-white to a gray color */
+}
+
+/* Small utility to hide native scrollbar for horizontally scrolling nav */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Responsive navbar: reduce top margin and add background on small screens for contrast */
+#home-navbar {
+  backdrop-filter: blur(6px);
+}
+
+/* Portrait decoration: hide decorative offsets on small screens to prevent overflow */
+.portrait-wrapper {
+  position: relative;
+}
+.portrait-deco {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .portrait-deco {
+    display: none; /* hide decorative borders on tablet and mobile */
+  }
+  #home-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+  }
+  .nav-link {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Make nav buttons slightly larger for touch */
+  .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.95rem;
+  }
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
