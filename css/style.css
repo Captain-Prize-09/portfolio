@@ -206,18 +206,41 @@ body {
     font-size: 16px;
   }
 
-  /* Hide decorative bordered divs in about section to prevent overflow */
-  #about .relative > .absolute {
-    display: none !important;
-  }
-
-  /* Ensure about image is centered and constrained on small screens */
-  #about img {
-    display: block;
+  /* Preserve decorative bordered divs for the About portrait on mobile
+     but constrain their size so they don't overflow. This makes the
+     mobile portrait look like the desktop framed portrait and keeps it
+     centered under the "Who Am I ?" heading. */
+  #about .relative.mx-auto.max-w-md {
+    max-width: 360px; /* allow similar framed size as desktop but constrained */
     margin-left: auto;
     margin-right: auto;
-    max-width: 90%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* style the two decorative absolute border layers (the ones used on desktop)
+     to be visible and slightly reduced in offset on mobile */
+  #about .relative.mx-auto.max-w-md > .absolute {
+    display: block !important;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  /* make sure the image fills the framed container and respects radii */
+  #about .relative.mx-auto.max-w-md .relative.rounded-3xl {
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  #about .relative.mx-auto.max-w-md .relative.rounded-3xl img {
+    display: block;
+    width: 100%;
     height: auto;
+    object-fit: cover;
   }
 
   /* Mobile menu styles for better touch targets */
@@ -236,8 +259,8 @@ body {
 
   /* Mobile hero framed card */
   .mobile-hero-card {
-    width: 260px;
-    height: 260px;
+    width: 340px;
+    height: 340px;
     border-radius: 20px;
     padding: 14px;
     background: linear-gradient(
@@ -247,7 +270,7 @@ body {
     );
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6),
       inset 0 1px 0 rgba(255, 255, 255, 0.02);
-    transform: rotate(-6deg);
+    transform: rotate(0deg);
     overflow: hidden;
     display: inline-block;
     margin-top: 8px;
@@ -298,5 +321,30 @@ body {
     border-radius: 10px;
     position: relative;
     z-index: 11; /* below pseudo-elements so the borders are visible */
+  }
+
+  /* Make sure the About portrait stacks under the text on small screens
+     and is centered. Targets the two column children inside the about
+     section's flex container when it's in column mode. */
+  #about .flex.flex-col > .lg\:w-1\/2 {
+    width: 100%;
+  }
+
+  /* Ensure the image column appears after the text column on mobile */
+  #about .flex.flex-col > .lg\:w-1\/2.relative {
+    order: 2;
+    margin-top: 1rem;
+  }
+
+  /* Keep the text column first */
+  #about .flex.flex-col > .lg\:w-1\/2:first-child {
+    order: 1;
+  }
+
+  /* Reduce the framed image width a bit and center it under the heading */
+  #about .relative.mx-auto.max-w-md {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
