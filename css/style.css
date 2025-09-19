@@ -145,10 +145,13 @@
   color: #656666;
 }
 
+/* Removed global black background and white text overrides to allow light theme */
+/*
 body {
   background: #000000 !important;
   color: #fff !important;
 }
+*/
 .bg-white,
 .bg-gray-50,
 .bg-gray-100,
