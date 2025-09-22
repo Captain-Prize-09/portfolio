@@ -86,6 +86,7 @@
 .skill-bar {
   height: 8px;
   transition: width 1.5s ease;
+  background-color: #a3a3a3;
 }
 .portfolio-item,
 .service-card {
@@ -350,4 +351,17 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/* Skill visuals: make the outer track a subtle translucent line and the inner bar pure white
+   This overrides the earlier global .bg-* rules which were forced to dark colors. */
+.skill-card .w-full.bg-gray-200 {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.skill-card .skill-bar {
+  height: 8px;
+  transition: width 1.5s ease;
+  background-color: #ffffff !important; /* make filled portion white */
+  border-radius: 9999px;
 }

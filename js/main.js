@@ -70,13 +70,15 @@ class ModernSPA {
     // Dark/light theme toggle
     const themeToggle = document.getElementById("theme-toggle");
     const htmlElement = document.documentElement;
-    themeToggle.addEventListener("click", function () {
-      htmlElement.classList.toggle("dark");
-      localStorage.setItem(
-        "theme",
-        htmlElement.classList.contains("dark") ? "dark" : "light"
-      );
-    });
+    if (themeToggle) {
+      themeToggle.addEventListener("click", function () {
+        htmlElement.classList.toggle("dark");
+        localStorage.setItem(
+          "theme",
+          htmlElement.classList.contains("dark") ? "dark" : "light"
+        );
+      });
+    }
 
     // Check for saved theme preference
     if (localStorage.getItem("theme") === "light") {
@@ -209,14 +211,25 @@ class ModernSPA {
   // Animate skill bars
   animateSkills() {
     const skillBars = document.querySelectorAll(".skill-bar");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          const width = bar.getAttribute("data-width");
+          // Reset width to 0 before animating to ensure re-animation
+          bar.style.width = "0%";
+          // A small delay to allow the reset to render before animating
+          setTimeout(() => {
+            bar.style.width = width;
+          }, 50);
+          // Unobserve after animation to prevent re-triggering
+          observer.unobserve(bar);
+        }
+      });
+    }, { threshold: 0.1 });
+
     skillBars.forEach((bar) => {
-      const width = bar.getAttribute("data-width");
-      // Reset width to 0 before animating to ensure re-animation on section change
-      bar.style.width = "0%";
-      // A small delay to allow the reset to render before animating
-      setTimeout(() => {
-        bar.style.width = width;
-      }, 50);
+      observer.observe(bar);
     });
   }
 
@@ -245,8 +258,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const typed = new Typed("#typed", {
     strings: [
       "Backend Developer",
-      "Web Developer",
-      "IT Specialist",
+      "Modern Web Developer",
+      "System Administrator",
     ],
     typeSpeed: 50,
     backSpeed: 30,

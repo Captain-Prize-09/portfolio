@@ -1,5 +1,0 @@
-- [x] Edit index.html to move the image div inside the text div after the "Who Am I ?" h2
-- [x] Remove the image div from the flex container
-- [x] Update classes on the text div to make it full width
-- [x] Add CSS in style.css to float the image right on desktop (lg screens) (using Tailwind classes)
-- [ ] Test the layout on mobile and desktop
