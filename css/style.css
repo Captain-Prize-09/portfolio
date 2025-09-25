@@ -295,7 +295,8 @@ body {
     right: 6px;
     bottom: 6px;
     border-radius: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.12);
+    /* use hire-me color with subtle opacity to match Hire Me border tone */
+    border: 2px solid rgba(209, 213, 219, 0.12);
     pointer-events: none;
     box-sizing: border-box;
     z-index: 12;
@@ -309,7 +310,8 @@ body {
     right: 12px;
     bottom: 12px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    /* slightly stronger inner stroke using hire-me color */
+    border: 1px solid rgba(209, 213, 219, 0.22);
     pointer-events: none;
     box-sizing: border-box;
     z-index: 13;
@@ -379,7 +381,8 @@ body {
 #services .portfolio-item > div,
 #skills .portfolio-item > div {
   background-color: #0a0a0a !important;
-  border-color: #1f1f1f !important;
+  /* normalize card borders to match Hire Me button */
+  border-color: #d1d5db !important;
   color: #e6e6e6 !important;
   box-shadow: none !important;
 }
@@ -398,10 +401,12 @@ body {
   color: #c7c7c7 !important;
 }
 
-/* Icons: gray tones */
-#services .service-card i,
+/* Icons: ensure services and skills icons are white for high contrast */
+#services .service-card i {
+  color: #ffffff !important;
+}
 #skills .skill-card i {
-  color: #9ca3af !important; /* cool gray */
+  color: #ffffff !important;
 }
 
 /* Make service icons and border lines pure white as requested */
@@ -409,13 +414,13 @@ body {
 #services .service-card .w-16 i,
 #services .service-card .w-16 {
   color: #ffffff !important;
-  border-color: #ffffff !important;
+  border-color: #d1d5db !important;
 }
 
 /* Ensure the outer service-card border and any internal dividing lines are white */
 #services .service-card,
 #services .service-card * {
-  border-color: #ffffff !important;
+  border-color: #d1d5db !important;
 }
 
 /* Buttons inside services/skills: keep borders and text in gray/white */
@@ -450,7 +455,6 @@ body {
   border: 1px solid #2a2a2a !important;
 }
 
-/* Ensure text-muted utilities inside these sections use gray shades */
 #services .text-gray-500,
 #skills .text-gray-500,
 #services .text-gray-600,
@@ -472,4 +476,138 @@ body {
 #about .relative.mx-auto.max-w-md,
 #about .about-image {
   border: none !important;
+}
+
+/* Apply the same strict black/white/gray theme to the Portfolio section */
+#portfolio {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Portfolio cards: near-black background, subtle borders, white headings */
+#portfolio .portfolio-item > div,
+#portfolio .portfolio-item .p-6,
+#portfolio .portfolio-item .rounded-xl {
+  background-color: #0a0a0a !important;
+  /* normalize card borders to match Hire Me button */
+  border-color: #d1d5db !important;
+  color: #e6e6e6 !important;
+  box-shadow: none !important;
+}
+
+#portfolio .portfolio-item h4,
+#portfolio .portfolio-item .font-bold,
+#portfolio h2 {
+  color: #ffffff !important;
+}
+
+#portfolio .portfolio-item p,
+#portfolio .portfolio-item .text-gray-500,
+#portfolio .portfolio-item .text-sm {
+  color: #c7c7c7 !important;
+}
+
+/* Ensure overlay action buttons are grayscale and readable */
+#portfolio .btn-hover,
+#portfolio .portfolio-item .btn-hover,
+#portfolio .portfolio-item .btn-hover a {
+  background: transparent !important;
+  border-color: #d1d5db !important;
+  color: #ffffff !important;
+}
+#portfolio .portfolio-item .btn-hover:hover {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border-color: #5b5b5b !important;
+}
+
+/* Make any icons inside portfolio cards white */
+#portfolio .portfolio-item i,
+#portfolio .portfolio-item .fa,
+#portfolio .portfolio-item .fab {
+  color: #ffffff !important;
+}
+
+/* Keep the image overlay (semi-transparent) so images remain visible on black */
+#portfolio .group .absolute.inset-0.bg-black\/60 {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Ensure all border lines inside Portfolio and Skills sections are white */
+#portfolio .portfolio-item,
+#portfolio .portfolio-item *,
+#skills .skill-card,
+#skills .skill-card *,
+#portfolio .rounded-xl,
+#skills .rounded-xl {
+  border-color: #d1d5db !important;
+}
+
+/* Apply dark black/white/gray theme to Contact section and force white borders */
+#contact {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Contact card styles */
+#contact .bg-white,
+#contact .p-8,
+#contact .rounded-xl,
+#contact .shadow-lg,
+#contact .border-gray-100 {
+  background-color: #0a0a0a !important;
+  border-color: #d1d5db !important;
+  color: #e6e6e6 !important;
+  box-shadow: none !important;
+}
+
+#contact h2,
+#contact h3,
+#contact .font-display,
+#contact .font-bold {
+  color: #ffffff !important;
+}
+
+#contact p,
+#contact .text-gray-600,
+#contact .text-sm {
+  color: #c7c7c7 !important;
+}
+
+/* Buttons and links in contact should be readable on black and have white borders */
+#contact .btn-hover,
+#contact a.btn-hover,
+#contact .btn-hover a,
+#contact .w-10.h-10 {
+  background: transparent !important;
+  border-color: #d1d5db !important;
+  color: #ffffff !important;
+}
+#contact .btn-hover:hover,
+#contact a.btn-hover:hover {
+  background: #111111 !important;
+  color: #ffffff !important;
+}
+
+/* Icons in contact area to white */
+#contact i,
+#contact .fab,
+#contact .fas {
+  color: #ffffff !important;
+}
+
+/* Ensure any small social icon backgrounds are dark but bordered in white */
+#contact .w-10.h-10 {
+  background-color: #0a0a0a !important;
+  border-radius: 9999px !important;
+  border: 2px solid #d1d5db !important;
+}
+
+/* Make sure any input-like borders (if present) appear white */
+#contact input,
+#contact textarea,
+#contact .form-control {
+  border-color: #d1d5db !important;
+  background: transparent !important;
+  color: #ffffff !important;
 }
