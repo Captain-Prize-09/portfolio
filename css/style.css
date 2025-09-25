@@ -365,3 +365,111 @@ body {
   background-color: #ffffff !important; /* make filled portion white */
   border-radius: 9999px;
 }
+
+/* Dark theme: strictly black / white / gray for Services and Skills sections */
+#services,
+#skills {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Cards inside these sections should be near-black with subtle gray borders */
+#services .service-card,
+#skills .skill-card,
+#services .portfolio-item > div,
+#skills .portfolio-item > div {
+  background-color: #0a0a0a !important;
+  border-color: #1f1f1f !important;
+  color: #e6e6e6 !important;
+  box-shadow: none !important;
+}
+
+/* Headings and paragraph tones */
+#services .service-card h3,
+#skills .skill-card h3,
+#services h2,
+#skills h2 {
+  color: #ffffff !important;
+}
+#services .service-card p,
+#skills .skill-card p,
+#services .service-card ul li span,
+#skills .skill-card ul li span {
+  color: #c7c7c7 !important;
+}
+
+/* Icons: gray tones */
+#services .service-card i,
+#skills .skill-card i {
+  color: #9ca3af !important; /* cool gray */
+}
+
+/* Make service icons and border lines pure white as requested */
+#services .service-card i,
+#services .service-card .w-16 i,
+#services .service-card .w-16 {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* Ensure the outer service-card border and any internal dividing lines are white */
+#services .service-card,
+#services .service-card * {
+  border-color: #ffffff !important;
+}
+
+/* Buttons inside services/skills: keep borders and text in gray/white */
+#services .btn-hover,
+#skills .btn-hover,
+#services .btn-hover a,
+#skills .btn-hover a {
+  background: transparent !important;
+  border-color: #3f3f3f !important;
+  color: #e5e7eb !important;
+}
+#services .btn-hover:hover,
+#skills .btn-hover:hover {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border-color: #5b5b5b !important;
+}
+
+/* Skill tracks and filled bars for dark background */
+#skills .skill-card .w-full.bg-gray-200 {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+#skills .skill-card .skill-bar {
+  background-color: #ffffff !important; /* filled part stays white */
+}
+
+/* Close button contrast in dark sections */
+#services .close-section-btn,
+#skills .close-section-btn {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+/* Ensure text-muted utilities inside these sections use gray shades */
+#services .text-gray-500,
+#skills .text-gray-500,
+#services .text-gray-600,
+#skills .text-gray-600 {
+  color: #9aa0a6 !important;
+}
+
+/* Remove decorative border lines around the About portrait (both desktop and mobile)
+   The bordered layers are the absolute elements placed around the image container. */
+#about .relative.mx-auto.max-w-md > .absolute,
+#about .about-image .absolute,
+#about .relative.mx-auto.max-w-md > .absolute {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Also ensure any direct border on the framed container is removed */
+#about .relative.mx-auto.max-w-md,
+#about .about-image {
+  border: none !important;
+}
