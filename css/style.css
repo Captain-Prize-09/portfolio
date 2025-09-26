@@ -611,3 +611,28 @@ body {
   background: transparent !important;
   color: #ffffff !important;
 }
+
+/* ------------------------------------------------------------------ */
+/* Make most buttons show the same white/pale borders used in Contact */
+/* This applies to .btn-hover and generic button-like elements across the */
+/* site so they have a consistent thin white borderline, matching #contact */
+/* ------------------------------------------------------------------ */
+button,
+a.btn-hover,
+.btn-hover,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  border-color: #d1d5db !important;
+  color: #ffffff !important;
+}
+
+/* Exclude header buttons / nav items: keep header appearance unchanged */
+#home-navbar button,
+#home-navbar .btn-hover,
+#home-navbar a.btn-hover,
+#home-navbar .nav-link,
+#home-navbar #mobile-menu-button {
+  border-color: transparent !important;
+  color: inherit !important;
+}
