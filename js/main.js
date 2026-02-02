@@ -4,10 +4,17 @@ class ModernSPA {
     this.transitionOverlay = document.getElementById("transition-overlay");
     this.isTransitioning = false;
     this.initEventListeners();
+    this.initHistoryListener();
     this.initializeSections();
   }
 
   initializeSections() {
+    // Check URL hash for initial section
+    const hash = window.location.hash.substring(1);
+    if (hash && document.getElementById(hash)) {
+      this.currentSection = hash;
+    }
+
     // Ensure only the initial section is active on load
     document.querySelectorAll(".section").forEach((section) => {
       if (section.id !== this.currentSection) {
@@ -17,6 +24,25 @@ class ModernSPA {
       }
     });
     this.updateNavigation(this.currentSection);
+  }
+
+  initHistoryListener() {
+    window.addEventListener("popstate", (event) => {
+      let targetSection = event.state ? event.state.section : null;
+
+      // Fallback to hash if state is missing
+      if (!targetSection) {
+        const hash = window.location.hash.substring(1);
+        if (hash && document.getElementById(hash)) {
+          targetSection = hash;
+        } else {
+          targetSection = "home";
+        }
+      }
+
+      // Navigate without updating history since we are already traversing it
+      this.navigateToSection(targetSection, false);
+    });
   }
 
   initEventListeners() {
@@ -75,7 +101,7 @@ class ModernSPA {
         htmlElement.classList.toggle("dark");
         localStorage.setItem(
           "theme",
-          htmlElement.classList.contains("dark") ? "dark" : "light"
+          htmlElement.classList.contains("dark") ? "dark" : "light",
         );
       });
     }
@@ -98,7 +124,7 @@ class ModernSPA {
             "bg-gray-200",
             "",
             "hover:bg-primary-500",
-            "hover:text-white"
+            "hover:text-white",
           );
         });
 
@@ -107,7 +133,7 @@ class ModernSPA {
           "bg-gray-200",
           "",
           "hover:bg-primary-500",
-          "hover:text-white"
+          "hover:text-white",
         );
 
         // Filter items
@@ -136,10 +162,18 @@ class ModernSPA {
     }
   }
 
-  async navigateToSection(targetSection) {
+  async navigateToSection(targetSection, updateHistory = true) {
     if (this.isTransitioning) return;
 
+    // If we are already on the target section, do nothing
+    if (this.currentSection === targetSection) return;
+
     this.isTransitioning = true;
+
+    // Update Browser History
+    if (updateHistory) {
+      history.pushState({ section: targetSection }, "", `#${targetSection}`);
+    }
 
     // Start curtain down animation
     this.transitionOverlay.classList.remove("curtain-up");
@@ -211,22 +245,25 @@ class ModernSPA {
   // Animate skill bars
   animateSkills() {
     const skillBars = document.querySelectorAll(".skill-bar");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const bar = entry.target;
-          const width = bar.getAttribute("data-width");
-          // Reset width to 0 before animating to ensure re-animation
-          bar.style.width = "0%";
-          // A small delay to allow the reset to render before animating
-          setTimeout(() => {
-            bar.style.width = width;
-          }, 50);
-          // Unobserve after animation to prevent re-triggering
-          observer.unobserve(bar);
-        }
-      });
-    }, { threshold: 0.1 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const bar = entry.target;
+            const width = bar.getAttribute("data-width");
+            // Reset width to 0 before animating to ensure re-animation
+            bar.style.width = "0%";
+            // A small delay to allow the reset to render before animating
+            setTimeout(() => {
+              bar.style.width = width;
+            }, 50);
+            // Unobserve after animation to prevent re-triggering
+            observer.unobserve(bar);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
 
     skillBars.forEach((bar) => {
       observer.observe(bar);
