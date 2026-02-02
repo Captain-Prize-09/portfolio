@@ -9,11 +9,28 @@ class ModernSPA {
   }
 
   initializeSections() {
-    // Check URL hash for initial section
+    let initialSection = "home";
+
+    // 1. Check URL hash (priority for incoming links)
     const hash = window.location.hash.substring(1);
     if (hash && document.getElementById(hash)) {
-      this.currentSection = hash;
+      initialSection = hash;
+      // Clear the hash from the URL immediately for a clean look
+      history.replaceState(
+        { section: initialSection },
+        "",
+        window.location.pathname,
+      );
     }
+    // 2. Check LocalStorage (restore previous session)
+    else {
+      const savedSection = localStorage.getItem("currentSection");
+      if (savedSection && document.getElementById(savedSection)) {
+        initialSection = savedSection;
+      }
+    }
+
+    this.currentSection = initialSection;
 
     // Ensure only the initial section is active on load
     document.querySelectorAll(".section").forEach((section) => {
@@ -24,20 +41,24 @@ class ModernSPA {
       }
     });
     this.updateNavigation(this.currentSection);
+
+    // Set initial state so back button works correctly
+    if (!history.state) {
+      history.replaceState(
+        { section: this.currentSection },
+        "",
+        window.location.pathname,
+      );
+    }
   }
 
   initHistoryListener() {
     window.addEventListener("popstate", (event) => {
       let targetSection = event.state ? event.state.section : null;
 
-      // Fallback to hash if state is missing
+      // If no state (e.g., initial page load in history), fallback to home or local storage
       if (!targetSection) {
-        const hash = window.location.hash.substring(1);
-        if (hash && document.getElementById(hash)) {
-          targetSection = hash;
-        } else {
-          targetSection = "home";
-        }
+        targetSection = "home";
       }
 
       // Navigate without updating history since we are already traversing it
@@ -170,9 +191,16 @@ class ModernSPA {
 
     this.isTransitioning = true;
 
-    // Update Browser History
+    // Update Browser History and Persistence
     if (updateHistory) {
-      history.pushState({ section: targetSection }, "", `#${targetSection}`);
+      // Clean URL: just the pathname, no hash
+      history.pushState(
+        { section: targetSection },
+        "",
+        window.location.pathname,
+      );
+      // Save to localStorage so refresh works
+      localStorage.setItem("currentSection", targetSection);
     }
 
     // Start curtain down animation
